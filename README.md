@@ -111,10 +111,10 @@ watch -n [n] "ip a ; ip -6 r ; ping -c 2 www.cisco.com ; date"
 <a name="vmsum"></a>
 ### capture summary screen of 3 vm
 bun-clone-1-206 (IP : 172.31.1.109)
-<p align="center"><img src="Images/Screenshot_14.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_16.png"width=500></p>
 
 bun-clone-2-207 (IP : 172.31.1.111)
-<p align="center"><img src="Images/Screenshot_16.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_18.png"width=500></p>
 
 bun-otherOS-209 (IP : 172.31.1.119)
 <p align="center"><img src="Images/Screenshot_22.png"width=500></p>
