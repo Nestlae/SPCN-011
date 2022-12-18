@@ -16,7 +16,7 @@
 ## create master vm (ubuntu-22.04)
 
 1. ทำการล็อคอินเว็บไซต์ Proxmox และทำการกดปุ่ม Create VM ด้านขวาบน
-<p align="center"><img src="Screenshots_1.png"width=500></p>
+<p align="center"><img src="Images/Screenshots_1.png"width=500></p>
 
 2. ในหัวข้อ Generalกรอกชื่อเครื่องและตั้ง Resource Pool เป็น Special_CN เพื่อเรียกใช้ทรัพยากร
 <p align="center"><img src="Screenshots_2.png"width=500></p>
