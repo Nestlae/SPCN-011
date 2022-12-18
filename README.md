@@ -7,6 +7,7 @@
         - [change hostname](#changeht)
         - [local time update](#date)
         - [watch](#watch)
+        - [Extra_01 (QEMU Agent and Change IP Address)](#extra)
     - [capture summary screen of 3 vm](vmsum)
     - [capture watch screen 2 vm](watchsum)
 - [create vm from other os](#createvmos)
@@ -108,6 +109,23 @@ date
 watch -n [n] "ip a ; ip -6 r ; ping -c 2 www.cisco.com ; date"
 ```
 
+<a name="extra"></a>
+#### Extra_01 (QEMU Agent and Change IP Address)
+ในการติดตั้ง QEMU Guest Agent กรณีที่ไม่ได้เปิด QEMU Agent ใน Options จะใช้คำสั่งดังนี้
+```md
+sudo apt install qemu-guest-agent         #ติดตั้ง QEMU Guest Agent
+sudo systemctl start qemu-guest-agent     #เริ่มใช้งาน QEMU Guest Agent
+sudo systemctl status qemu-guest-agent    #เช็คสถานะของ QEMU Guest Agent 
+```
+
+และ VM ที่ทำการโคลนมาทั้งสองตัวนั้น IP ต้องไม่ซ้ำ เพื่อสามารถใช้งานพร้อมกันได้ วิธีการมีดังนี้
+```md
+sudo -i                                           #เข้า root
+rm /var/lib/dbus/machine-id     
+nano /etc/machine-id                              #เข้า nano เพื่อลบข้อมูลทั้งหมดใน machine-id และบันทึก
+ln -s /etc/machine-id /var/lib/dbus/machine-id    #Link ข้อมูลในไฟล์ machine-id
+reboot                                            #Reboot ให้ระบบ
+```
 <a name="vmsum"></a>
 ### capture summary screen of 3 vm
 bun-clone-1-206 (IP : 172.31.1.109)
