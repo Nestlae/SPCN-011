@@ -16,54 +16,54 @@
 ## create master vm (ubuntu-22.04)
 
 1. ทำการล็อคอินเว็บไซต์ Proxmox และทำการกดปุ่ม Create VM ด้านขวาบน
-<p align="center"><img src="Images/Screenshots_1.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_1.png"width=500></p>
 
 2. ในหัวข้อ Generalกรอกชื่อเครื่องและตั้ง Resource Pool เป็น Special_CN เพื่อเรียกใช้ทรัพยากร
-<p align="center"><img src="Screenshots_2.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_2.png"width=500></p>
 
 3. ในหัวข้อ OS ให้เลือก ISO Image เป็น ubuntu-22.04.01-live-server เพื่อเป็นไฟล์ในการติดตั้ง OS
-<p align="center"><img src="Screenshots_3.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_3.png"width=500></p>
 
 4. ในหัวข้อ System ให้ทำการติ๊กถูก Qemu Agent ไว้แลกเปลี่ยนข้อมูลระหว่าง Host กับ Guest
-<p align="center"><img src="Screenshots_4.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_4.png"width=500></p>
 
 5. ในหัวข้อ Disks จะใช้ Storage ของ Machine โดยตรงโดยเลือก Storage เป็น cept-std
-<p align="center"><img src="Screenshots_5.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_5.png"width=500></p>
 
 6. ที่เหลือจะตั้งค่าเป็น Default ทั้งหมดและสามารถกด Finish เพื่อสร้าง Master VM ขึ้นมาได้เลย
-<p align="center"><img src="Screenshots_6.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_6.png"width=500></p>
 
-<p align="center"><img src="Screenshots_7.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_7.png"width=500></p>
 
-<p align="center"><img src="Screenshots_8.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_8.png"width=500></p>
 
-<p align="center"><img src="Screenshots_9.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_9.png"width=500></p>
 
 <a name="github"></a>
 ### master vm import SSH identity from Github
 ในระหว่างการ Install จะทำการเปิด OpenSSH เพื่อเพิ่มความปลอดภัยต่อการใช้ SSH โดยจะรับ Public Key ของ GitHub มาเก็บไว้
-<p align="center"><img src="Screenshots_10.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_10.png"width=500></p>
 
 ระหว่างนั้นรอซักครู่ เสร็จแล้วลอง Log In เข้าใน SSH ของ OS ที่ติดตั้งไว้ ถ้าเข้าได้ปกติก็เป็นอันเสร็จสิ้นการติดตั้ง OS และเข้าสู่การทำ Template ได้เลย
-<p align="center"><img src="Screenshots_11.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_11.png"width=500></p>
 
 <a name="clonemt"></a>
 ### clone master vm to tamplate
 
 เราจะใช้ตัว VM จากการสร้างเมื่อซักครู่ แปลงเป็น Template โดยการคลิกขวาที่ตัว VM แล้วกด Convert to template และยืนยันเป็นอันเสร็จสิ้น
-<p align="center"><img src="Screenshots_11s.png"width=200></p>
+<p align="center"><img src="Images/Screenshot_11s.png"width=200></p>
 
-<p align="center"><img src="Screenshots_30.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_30.png"width=500></p>
 
 <a name="clone"></a>
 ### clone from template
 1. หลังจากที่ทำ Master VM เสร็จแล้วนั้น ให้ทำการคลิกขวาที่ Master VM แล้วทำการกด Clone
-<p align="center"><img src="Screenshots_12.png"width=200></p>
+<p align="center"><img src="Images/Screenshot_12.png"width=200></p>
 
 2. ให้ทำการตั้งชื่อและตั้ง Resource Pool และกด Clone จำนวนสองตัว
-<p align="center"><img src="Screenshots_13.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_13.png"width=500></p>
 
-<p align="center"><img src="Screenshots_14.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_14.png"width=500></p>
 
 3. ทำการ Setting ทีละเครื่องในขั้นตอนต่อไป เพื่อไม่ให้ IP ชนกัน
 
@@ -111,54 +111,54 @@ watch -n [n] "ip a ; ip -6 r ; ping -c 2 www.cisco.com ; date"
 <a name="vmsum"></a>
 ### capture summary screen of 3 vm
 bun-clone-1-206 (IP : 172.31.1.109)
-<p align="center"><img src="Screenshots_14.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_14.png"width=500></p>
 
 bun-clone-2-207 (IP : 172.31.1.111)
-<p align="center"><img src="Screenshots_16.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_16.png"width=500></p>
 
 bun-otherOS-209 (IP : 172.31.1.119)
-<p align="center"><img src="Screenshots_22.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_22.png"width=500></p>
 
 <a name="watchsum"></a>
 ### capture watch screen 2 vm
 
-<p align="center"><img src="Screenshots_15.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_15.png"width=500></p>
 
-<p align="center"><img src="Screenshots_17.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_17.png"width=500></p>
 
 <a name="createvmos"></a>
 ## create vm from other os
 
 1. เราจะกดที่ Create VM ที่เดิมและทำการตั้งค่าในการสร้าง OS ใหม่
-<p align="center"><img src="Screenshots_1.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_1.png"width=500></p>
 
-<p align="center"><img src="Screenshots_19.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_19.png"width=500></p>
 
 2. ในหน้า OS นั้นจะทำการลงเป็น Kali OS โดยเลือกในช่อง ISO Image
-<p align="center"><img src="Screenshots_20.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_20.png"width=500></p>
 
 3. ทำการ Finish และทำการติดตั้ง OS ตามปกติ และเปิด QEMU Agent ก่อนทำการ Boot ขึ้น เป็นอันเสร็จสิ้น
-<p align="center"><img src="Screenshots_21.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_21.png"width=500></p>
 
 <a name="createct"></a>
 ## create container template (select from CT list)
 
 1. ในการสร้าง Container Template ให้ทำการคลิกที่ Create CT
-<p align="center"><img src="Screenshots_23.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_23.png"width=500></p>
 
 2. ทำการตั้งชื่อ Hostname, รหัสผ่าน, Resource Pool และทำการกำหนด **[SSH public key](https://www.youtube.com/watch?v=WgZIv5HI44o)** เพื่อเพิ่มความปลอดภัยต่อการใช้ SSH โดยกดที่ Load SSH Key File และเลือกไฟล์ id_rsa.pub
-<p align="center"><img src="Screenshots_24.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_24.png"width=500></p>
 
 3. ในหน้า OS จะใช้ ubuntu-22.04-standard เป็น OS ให้กับ CT
-<p align="center"><img src="Screenshots_25.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_25.png"width=500></p>
 
 4. ในหน้า Storage จะใช้ Storage เป็น cept-std
-<p align="center"><img src="Screenshots_26.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_26.png"width=500></p>
 
 5. ในหน้า Network ส่วนของ IPv4 จะเลือกเป็น DHCP เพื่อให้จัดการและกำหนดค่า IP อัตโนมัติ และในส่วนของ IPv6 เป็น SLAAC เพื่อใช้กำหนดสร้างและกำหนดค่าที่อยู่ของ IPv6 ด้วยตนเอง
-<p align="center"><img src="Screenshots_27.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_27.png"width=500></p>
 
 6. กด Finish และลอง Boot ตั้ง timezone ให้ตรงและ ทดสอบคำสั่ง watch เป็นอันเสร็จสิ้น (ผลลัพธ์ที่ได้ จะเร็วกว่าตัว VM ธรรมดาเพราะมีการบริโภคทรัพยากรน้อยกว่า)
-<p align="center"><img src="Screenshots_28.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_28.png"width=500></p>
 
-<p align="center"><img src="Screenshots_29.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_29.png"width=500></p>
