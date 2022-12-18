@@ -43,10 +43,10 @@
 <a name="github"></a>
 ### master vm import SSH identity from Github
 ในระหว่างการ Install จะทำการเปิด OpenSSH เพื่อเพิ่มความปลอดภัยต่อการใช้ SSH โดยจะรับ Public Key ของ GitHub มาเก็บไว้
-<p align="center"><img src="Images/Screenshot_10.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_10.png"width=600></p>
 
 ระหว่างนั้นรอซักครู่ เสร็จแล้วลอง Log In เข้าใน SSH ของ OS ที่ติดตั้งไว้ ถ้าเข้าได้ปกติก็เป็นอันเสร็จสิ้นการติดตั้ง OS และเข้าสู่การทำ Template ได้เลย
-<p align="center"><img src="Images/Screenshot_11.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_11.png"width=600></p>
 
 <a name="clonemt"></a>
 ### clone master vm to tamplate
@@ -54,7 +54,7 @@
 เราจะใช้ตัว VM จากการสร้างเมื่อซักครู่ แปลงเป็น Template โดยการคลิกขวาที่ตัว VM แล้วกด Convert to template และยืนยันเป็นอันเสร็จสิ้น
 <p align="center"><img src="Images/Screenshot_11s.png"width=200></p>
 
-<p align="center"><img src="Images/Screenshot_30.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_30.png"width=600></p>
 
 <a name="clone"></a>
 ### clone from template
@@ -140,9 +140,9 @@ bun-otherOS-209 (IP : 172.31.1.119)
 <a name="watchsum"></a>
 ### capture watch screen 2 vm
 
-<p align="center"><img src="Images/Screenshot_15.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_15.png"width=600></p>
 
-<p align="center"><img src="Images/Screenshot_17.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_17.png"width=600></p>
 
 <a name="createvmos"></a>
 ## create vm from other os
@@ -156,7 +156,7 @@ bun-otherOS-209 (IP : 172.31.1.119)
 <p align="center"><img src="Images/Screenshot_20.png"width=500></p>
 
 3. ทำการ Finish และทำการติดตั้ง OS ตามปกติ และเปิด QEMU Agent ก่อนทำการ Boot ขึ้น เป็นอันเสร็จสิ้น
-<p align="center"><img src="Images/Screenshot_21.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_21.png"width=600></p>
 
 <a name="createct"></a>
 ## create container template (select from CT list)
@@ -177,6 +177,6 @@ bun-otherOS-209 (IP : 172.31.1.119)
 <p align="center"><img src="Images/Screenshot_27.png"width=500></p>
 
 6. กด Finish และลอง Boot ตั้ง timezone ให้ตรงและ ทดสอบคำสั่ง watch เป็นอันเสร็จสิ้น (ผลลัพธ์ที่ได้ จะเร็วกว่าตัว VM ธรรมดาเพราะมีการบริโภคทรัพยากรน้อยกว่า)
-<p align="center"><img src="Images/Screenshot_28.png"width=500></p>
+<p align="center"><img src="Images/Screenshot_28.png"width=600></p>
 
 <p align="center"><img src="Images/Screenshot_29.png"width=500></p>
